@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="IMAGES/Vito Cleaning favicon.png">
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles.Contact.css">
+</head>
+<body>
+  <header> 
+       <a href="index.html">
+       <img src="IMAGES/VITO CLEANING LOGO WITH NAME 2.png" alt="Vito Cleaning logo">
+       </a>
+    <nav>
+      <ul>
+        <li id="active"><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Testimonials.html">Testimonials</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+      <!-- Search Bar Component -->
+<form class="search-bar" action="/search" method="GET" role="search">
+  <label for="site-search" class="sr-only"></label>
+  <input
+    id="site-search"
+    type="search"
+    name="q"
+    placeholder="Search…"
+    required
+  />
+  <button type="submit" aria-label="Search">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="11" cy="11" r="8"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  </button>
+</form>
+  </header>
+
+    <!-- Intro -->
+  <section class="hero">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-sub">
+       Drop us a line or walk in—your spotless space starts
+        here.
+      </p>
+    <a href="index.html" class="btn">HOME</a>
+  </section>
+
+  <section id="contact" class="contact">
+  <div class="container">
+
+    <div class="contact__body">
+      <!-- Contact Form -->
+      <form class="contact__form" action="https://formspree.io/f/YOUR_ID" method="POST">
+        <div class="field">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="field">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" />
+        </div>
+
+        <div class="field full">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="5" required></textarea> 
+        </div>
+
+        <!-- change only the tag + add 3 lines of JS -->
+<button class="btn" id="sendWA" type="button">Send Message</button>
+      </form>
+
+      <!-- Quick-contact chips -->
+      <aside class="contact__info">
+        <a class="chip" href="tel:+1234567890">
+          <span class="chip__icon">📞</span>
+          <span class="chip__text">+(233) 567-890</span>
+        </a>
+
+        <a class="chip" href="mailto:hello@cleanpro.com">
+          <span class="chip__icon">✉️</span>
+          <span class="chip__text">vitocleaning111@gmail.com</span>
+        </a>
+
+        <a class="chip" href="https://www.google.com/maps/place/Suhyen,+Koforidua/@6.1972848,-0.3305627,14z/data=!4m6!3m5!1s0xfdf38af20e596c7:0x4aef15b33b76518e!8m2!3d6.2012345!4d-0.3121199!16s%2Fg%2F1tdn5g8p?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+          <span class="chip__icon">📍</span>
+          <span class="chip__text">ACCRA CITY CAMPUS</span>
+        </a>
+      </aside>
+    </div>
+
+  </div>
+</section>
+
+  <section id="contact" class="contact-section">
+  <div class="container">
+
+    <!-- Location Cards -->
+    <ul class="location-grid">
+      <li class="location-card">
+        <h3>ASOKORE</h3>
+        <p>123 Sparkle Ave, Suite 200<br />ACCRA CITY CAMPUS</p>
+        <a class="btn" href="https://www.google.com/maps/place/Asokore,+Koforidua/@6.1123101,-0.283557,15z/data=!3m1!4b1!4m6!3m5!1s0xfdf40bbef922b61:0xb9fd72279f974f05!8m2!3d6.1157292!4d-0.2718018!16s%2Fg%2F11btxb15kb?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D">+(233) 987-654</a>
+      </li>
+
+      <li class="location-card">
+        <h3>KOFTOWN</h3>
+        <p>45 Shine Blvd<br />ACCRA CITY CAMPUS</p>
+        <a class="btn" href="https://www.google.com/maps/place/Koforidua/@6.1129141,-0.3543269,12z/data=!3m1!4b1!4m6!3m5!1s0xfdf4035371e4685:0xd63ba66d68af3d02!8m2!3d6.0784427!4d-0.2713944!16zL20vMDdfcm12?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D">+(233) 987-654</a>
+      </li>
+
+      <li class="location-card">
+        <h3>KOFIKROM</h3>
+        <p>700 Gleam Way, Unit 9<br />ACCRA CITY CAMPUS</p>
+        <a class="btn" href="https://www.google.com/maps/search/kofikrom/@5.5915371,-0.1564591,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D">+(233) 987-654</a>
+      </li>
+    </ul>
+
+  </div>
+</section>
+
+<script src="smooth-scroll.js" defer>
+  encodeURIComponent(document.getElementById('message').value.trim());
+  if (!name || !email || !msg) return alert('Please fill required fields');
+</script>
+
+    <!-- 🔹 FOOTER -->
+  <footer>
+  <div class="footer-wrapper">
+    <div class="footer-about">
+      <h3>About VITO CLEANING AGENCY</h3>
+      <p>Vito Cleaning Agency—also known as Vito Janitorial Services (VJS)—is a full-service cleaning company that’s been operating since 2001, primarily serving businesses in and around Toronto, Canada.</p>
+    </div>
+
+    <div class="footer-contact">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:vitocleaning111@gmail.com">vitocleaning111@gmail.com</a></p>
+      <p>Location: Accra, Ghana</p>
+      <p>Local Time: Friday, 15 August 2025, 03:10 AM GMT</p>
+    </div>
+
+    <div class="footer-social">
+      <h3>Connect</h3>
+      <a href="https://twitter.com" target="_blank">Twitter</a> |
+      <a href="https://facebook.com" target="_blank">Facebook</a> |
+      <a href="https://instergram.com" target="_blank">instergram</a>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 VITO CLEANING AGENCY. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

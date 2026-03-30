@@ -1,0 +1,236 @@
+/* 0. RESET & ROOT ---------------------------------------------------------- */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --clr-primary:#336699;
+  --clr-accent:#f57E23;
+  --radius:.5rem;
+  --transition:.3s ease;
+  font-size:16px;
+}
+body{
+  font-family:'Segoe UI',sans-serif;
+  line-height:1.6;
+  color:#333;
+  background:#fff;
+}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+
+/* 1. HEADER / NAV ---------------------------------------------------------- */
+header{
+  background:var(--clr-primary);
+  color:#fff;
+  padding:.75rem 1rem;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:0.5rem;
+}
+header{
+  position:sticky;   /* keeps header in the normal document flow but glued to the top */
+  top:0;             /* distance from the top when it “sticks” */
+  z-index:1000;      /* stays above hero images, cards, etc. */
+}
+header img{width:200px; height:auto}
+header h1{font-size:1.1rem;font-weight:700;margin-left:-5rem;float: left;}
+nav ul{display:flex;flex-wrap:wrap;gap:1rem;font-size:.875rem;font-weight:700;}
+nav a{color:#fff;transition:var(--transition)}
+nav a:hover{color:var(--clr-accent)}
+.search-bar{
+  display:flex;
+  flex:1 1 100%;
+  max-width:300px;
+}
+.search-bar input,
+.search-bar button{height:30px;border:none;font-size:.75rem}
+.search-bar input{flex:1;padding:0 .5rem;border-radius:var(--radius) 0 0 var(--radius)}
+.search-bar button{width:34px;background:#fff;border-radius:0 var(--radius) var(--radius) 0;cursor:pointer}
+@media(min-width:600px){
+  header{justify-content:space-between}
+  header h1{font-size:1.35rem}
+  .search-bar{flex:0 0 auto}
+}
+
+/* 2. HERO ---------------------------------------------------------- */
+.hero{
+  background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('IMAGES/22 sem.jpg') center/cover no-repeat;
+  color:#fff;
+  text-align:center;
+  padding:4rem 1rem;
+}
+.hero h1{font-size:2.2rem;margin-bottom:.5rem}
+.hero p{font-size:1rem;margin-bottom:1.5rem}
+.btn{
+  display:inline-block;
+  padding:.75rem 1.5rem;
+  background:var(--clr-accent);
+  color:#fff;
+  border-radius:var(--radius);
+  font-weight:600;
+  transition:var(--transition)
+}
+.btn:hover{opacity:.9}
+@media(min-width:768px){
+  .hero{padding:8rem 1rem}
+  .hero h1{font-size:3rem}
+  .hero p{font-size:1.25rem}
+}
+
+/* 3. SERVICES WRAPPER ------------------------------------------------ */
+.services-wrapper{
+  max-width:1200px;
+  margin:0 auto;
+  padding:2rem 1rem;
+  text-align:center;
+}
+.services-wrapper h2{
+  font-size:2.2rem;
+  margin-bottom:2rem;
+  background:#2c3e50;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* 4. SERVICE GRID -------------------------------------------------- */
+.service-grid{
+  display:grid;
+  gap:1.5rem;
+  grid-template-columns:1fr;          /* mobile: single column */
+  justify-items:center;
+}
+@media(min-width:600px){
+  .service-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(min-width:900px){
+  .service-grid{grid-template-columns:repeat(4,1fr)}
+}
+
+/* 5. SERVICE CARD (keep your glassmorphism) */
+.service-card{
+  position:relative;
+  width:100%;
+  max-width:260px;
+  height:340px;
+  border:1px solid var(--clr-primary);
+  border-radius:15px;
+  overflow:hidden;
+  cursor:pointer;
+  transition:transform .4s ease;
+}
+.service-card:hover{transform:translateY(-12px) scale(1.05)}
+.service-card::before{
+  content:'';
+  position:absolute;
+  inset:-50%;
+  background: fff;
+  background-size:300% 300%;
+  animation:gradientShift 6s ease-in-out infinite;
+  z-index:-1;
+}
+@keyframes gradientShift{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+.service-content{
+  position:absolute;
+  inset:6px;
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:15px;
+  padding:2rem 1rem;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  z-index:1;
+}
+.service-icon{font-size:2.5rem;margin-bottom:.8rem;animation:bounce 2s infinite}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.service-title{font-size:1.2rem;font-weight:600;margin-bottom:.5rem}
+.service-desc{font-size:.9rem;opacity:.85}
+
+/* 6. BEFORE / AFTER SECTION --------------------------------------- */
+.wrapper{
+  max-width:1100px;
+  margin:3rem auto;
+  padding:0 1rem;
+}
+.wrapper h1{
+  font-size:2.2rem;
+  text-align:center;
+  margin-bottom:2rem;
+  background:#2c3e50;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.ba-card{
+  display:grid;
+  gap:1rem;
+  grid-template-columns:1fr;   /* mobile: single column */
+  margin-bottom:2rem;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:transform .3s ease;
+}
+.ba-card:hover{transform:translateY(-6px)}
+.panel{
+  position:relative;
+  height:200px;
+  overflow:hidden;
+}
+.panel img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.panel:hover img{transform:scale(1.08)}
+.label{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:#111;
+  color:#fff;
+  font-size:.75rem;
+  font-weight:600;
+  padding:4px 10px;
+  border-radius:4px;
+}
+.label.after{background:#00c851}
+.info{
+  padding:1.2rem 1rem;
+  background:#fff;
+}
+.info h3{font-size:1.2rem;margin-bottom:.3rem}
+.info p{font-size:.9rem;color:#555}
+
+/* 7. RESPONSIVE BEFORE/AFTER -------------------------------------- */
+@media(min-width:600px){
+  .ba-card{grid-template-columns:1fr 1fr}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .hero { animation: fadeUp .8s both; }
+  @keyframes fadeUp {from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+}
+
+/* 8. FOOTER (unchanged, already responsive) */
+footer{
+  background:var(--clr-primary);
+  color:#fff;
+  padding:2rem 1rem;
+}
+.footer-wrapper{
+  max-width:1000px;
+  margin:0 auto;
+  display:grid;
+  gap:2rem;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+}
+.footer-bottom{
+  grid-column:1/-1;
+  text-align:center;
+  margin-top:1rem;
+  font-size:.875rem;
+  color:#ccc;
+}
